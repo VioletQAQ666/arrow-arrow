@@ -91,10 +91,20 @@ test_logic.py   单元测试
 - 逻辑与表现分离：点击成功时立即从棋盘移除，飞出动画由独立对象负责。
 
 ## 游戏截图
-![开始界面](screenshots/start.png)
-![游戏界面](screenshots/game.png)
-![通关界面](screenshots/win.png)
-![失败界面](screenshots/lose.png)
+-开始页面
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/82639e77-b93b-4a5e-8a95-30ddebd3823a" />
+
+-关卡选择
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/953684b0-e406-49fa-a88d-971e403e0f04" />
+
+-游戏进行
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/22349409-0ec6-4846-8aaf-749ab6098ae5" />
+
+-游戏通关
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/4e325259-342d-41c6-bdc8-9460d2b36239" />
+
+-游戏失败
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/b54704de-ed74-4341-872f-0377b0ec6915" />
 
 ## 素材说明
 本项目所有图形均由 Pygame 代码绘制，未使用任何外部图片、音效素材。
