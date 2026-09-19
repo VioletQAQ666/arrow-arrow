@@ -9,12 +9,16 @@
 用法：
     python make_demo_gif.py
 
-默认把 demo/demo.mp4 转成 demo/demo.gif：
+默认把 demo/demo.mp4 转成 demo/demo-long.gif：
   - 缩放到宽 640（GIF 太大又糊又慢，缩到 640 后文字仍然清楚）
   - 抽帧到 12fps（30fps 全保留会让文件暴涨，12fps 已足够看清动画）
   - 用 ffmpeg 两遍调色板（palettegen + paletteuse）而不是简单量化，
     否则渐变背景会出现明显的色带
   - 每一段加一行中文小标题，说明当前在演示什么
+
+注意：README 里实际展示的是 demo/demo.gif，那一份由作者本人录制转换
+（240×186、约 5 秒、224KB）。本脚本故意输出到 demo/demo-long.gif，
+不会覆盖它；想换成脚本生成的版本时，把 DST 改掉再跑即可。
 
 GIF 体积主要取决于 尺寸 × 帧率 × 时长，太大就调 width/fps 两个参数。
 """
@@ -26,7 +30,7 @@ import imageio_ffmpeg
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "demo", "demo.mp4")
-DST = os.path.join(HERE, "demo", "demo.gif")
+DST = os.path.join(HERE, "demo", "demo-long.gif")
 
 # 每个时间段的说明文字：(起始秒, 结束秒, 文字)
 CAPTIONS = [
