@@ -221,6 +221,11 @@ def is_blocked(grid, row, col, direction):
 
 ![随机关卡](screenshots/random.png)
 
+随机关卡（AI自动求解）：
+
+<img width="240" height="186" alt="IMG_3464" src="https://github.com/user-attachments/assets/b332f61b-ab5d-4b65-a19c-6a200f63b88e" />
+
+
 ## 素材说明
 
 本项目所有图形（箭头、心形、星形、按钮、粒子、渐变背景）均由 Pygame 代码实时绘制，
