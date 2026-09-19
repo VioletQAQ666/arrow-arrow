@@ -91,6 +91,9 @@ test_logic.py       路径检测、关卡可解性、随机关卡生成、星级
 test_gameplay.py    T01~T06 六个必测项的自动化测试（不需要 pygame 窗口）
 self_test.py        无头整局冒烟测试：真的把游戏跑一遍
 make_screenshots.py 无头导出界面截图到 screenshots/
+make_demo_gif.py    把演示视频转成 GIF（需要 imageio-ffmpeg）
+demo/demo.gif       约 15 秒的实机演示动图（README 里自动播放）
+demo/demo.mp4       同一段演示的原视频（清晰度更高）
 ```
 
 ### 分层说明
@@ -225,6 +228,20 @@ def is_blocked(grid, row, col, direction):
 
 <img width="240" height="186" alt="IMG_3464" src="https://github.com/user-attachments/assets/b332f61b-ab5d-4b65-a19c-6a200f63b88e" />
 
+
+## 演示视频 / 动图
+
+约 15 秒的实机演示（开始界面 → 选关 → 点击箭头飞出 → 碰撞反馈 → 通关结算），
+下面是自动播放的 GIF，打开本页面即可直接看到：
+
+![演示](demo/demo.gif)
+
+也可以看清晰度更高的原视频：**[▶ 点此观看 demo.mp4](demo/demo.mp4)**
+
+> GIF 由 `python make_demo_gif.py` 从 `demo/demo.mp4` 生成
+> （缩放到 640px、12fps、ffmpeg 两遍调色板，约 1.2MB）。
+> GitHub 的 Markdown 不支持在 README 里内嵌播放 mp4（`<video>` 标签会被过滤，
+> 只有图片能内联渲染），所以动图用 GIF、原视频用链接。
 
 ## 素材说明
 
