@@ -234,11 +234,6 @@ def is_blocked(grid, row, col, direction):
 
 ![随机关卡](screenshots/random.png)
 
-随机关卡（AI自动求解）：
-
-<img width="240" height="186" alt="IMG_3464" src="https://github.com/user-attachments/assets/b332f61b-ab5d-4b65-a19c-6a200f63b88e" />
-
-
 ## 演示视频 / 动图
 
 约 15 秒的实机演示，下面是自动播放的 GIF，打开本页面即可直接看到。
