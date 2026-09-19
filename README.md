@@ -92,19 +92,19 @@ test_logic.py   单元测试
 
 ## 游戏截图
 -开始页面
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/82639e77-b93b-4a5e-8a95-30ddebd3823a" />
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/bdfd1c3c-d05f-4773-af7d-b162535076b3" />
 
 -关卡选择
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/953684b0-e406-49fa-a88d-971e403e0f04" />
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/ace0ac2b-017d-4dc0-82ca-7c17222abd8a" />
 
 -游戏进行
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/22349409-0ec6-4846-8aaf-749ab6098ae5" />
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/0c75eacf-1455-4e3d-991f-599b6f68c3f3" />
 
 -游戏通关
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/4e325259-342d-41c6-bdc8-9460d2b36239" />
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/3e7e8507-2654-40c0-bbbc-06d0744d151f" />
 
 -游戏失败
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/b54704de-ed74-4341-872f-0377b0ec6915" />
+<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/bb7a22b1-4a47-4760-beeb-f3bd9c9af449" />
 
 ## 素材说明
 本项目所有图形均由 Pygame 代码绘制，未使用任何外部图片、音效素材。
