@@ -221,29 +221,6 @@ def is_blocked(grid, row, col, direction):
 
 ![随机关卡](screenshots/random.png)
 
-### 作者上传的截图（GitHub 附件）
-
-以下为作者本人在 GitHub 网页端上传的截图附件，保留于此以便在 GitHub 页面上直接显示：
-
--开始页面
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/bdfd1c3c-d05f-4773-af7d-b162535076b3" />
-
--关卡选择
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/ace0ac2b-017d-4dc0-82ca-7c17222abd8a" />
-
--游戏进行
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/0c75eacf-1455-4e3d-991f-599b6f68c3f3" />
-
--游戏通关
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/3e7e8507-2654-40c0-bbbc-06d0744d151f" />
-
--游戏失败
-<img width="976" height="759" alt="image" src="https://github.com/user-attachments/assets/bb7a22b1-4a47-4760-beeb-f3bd9c9af449" />
-
-> 说明：早期的纯文字版 README 是在 GitHub 网页端编辑的，本文件为完整版，
-> 已把网页端上传的截图附件一并保留；仓库内的 `screenshots/` 目录同时提供了
-> 由 `make_screenshots.py` 直接导出的 PNG，两种方式都能正常显示。
-
 ## 素材说明
 
 本项目所有图形（箭头、心形、星形、按钮、粒子、渐变背景）均由 Pygame 代码实时绘制，
