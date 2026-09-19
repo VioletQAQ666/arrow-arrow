@@ -91,9 +91,9 @@ test_logic.py       路径检测、关卡可解性、随机关卡生成、星级
 test_gameplay.py    T01~T06 六个必测项的自动化测试（不需要 pygame 窗口）
 self_test.py        无头整局冒烟测试：真的把游戏跑一遍
 make_screenshots.py 无头导出界面截图到 screenshots/
-make_demo_gif.py    把演示视频转成 GIF（需要 imageio-ffmpeg，参数可调）
-demo/demo.gif       实机演示动图（720×525、约 15 秒，README 里自动播放）
-demo/demo.mp4       同一段演示的原视频（962×752，清晰度更高）
+make_demo_gif.py    把演示视频转成 GIF（需要 imageio-ffmpeg）
+demo/demo.gif       约 15 秒的实机演示动图（README 里自动播放）
+demo/demo.mp4       同一段演示的原视频（清晰度更高）
 ```
 
 ### 分层说明
@@ -229,27 +229,23 @@ def is_blocked(grid, row, col, direction):
 <img width="240" height="186" alt="IMG_3464" src="https://github.com/user-attachments/assets/b332f61b-ab5d-4b65-a19c-6a200f63b88e" />
 
 
-## 演示动图 / 视频
+## 演示视频 / 动图
 
-下面这张 GIF 打开本页面就会自动播放。它录的是「随机·困难」一局的实际操作：
-开局 25 个箭头，点击后箭头沿自身方向飞出棋盘，棋盘逐步清空，最后剩余箭头归零。
+约 15 秒的实机演示，下面是自动播放的 GIF，打开本页面即可直接看到。
+录的是「随机·困难」一局的对局过程：点击箭头后它沿自身方向飞出棋盘，
+剩余箭头数递减，棋盘逐步清空。
 
 ![演示](demo/demo.gif)
 
-> 录制自真实运行画面：720×525、179 帧、12fps，约 15 秒，1.5 MB。
-> 录屏时已裁掉窗口标题栏，画面内容就是游戏窗口本身。
+也可以看清晰度更高的原视频：**[▶ 点此观看 demo.mp4](demo/demo.mp4)**
 
-同一段录像也保留了原视频（962×752，清晰度更高）：
-
-**▶ [点此观看 demo.mp4](demo/demo.mp4)**
-
+> GIF 由 `python make_demo_gif.py` 从 `demo/demo.mp4` 生成
+> （裁掉窗口标题栏后缩放到 640×467、12fps、整段 15 秒，ffmpeg 两遍调色板，约 1.3MB，
+> 并按阶段叠加了说明文字）。
 > GitHub 的 Markdown 不支持在 README 里内嵌播放 mp4（`<video>` 标签会被过滤，
 > 只有图片能内联渲染），所以动图用 GIF、原视频用链接。
 >
-> 想重新生成 GIF 可以运行 `python make_demo_gif.py`（依赖
-> `pip install imageio-ffmpeg`），参数可调，例如
-> `python make_demo_gif.py --width 480 --seconds 9 --out demo/small.gif`
-> 可以得到体积更小的版本。
+> 这段录像录的是对局过程；**开始界面、选关界面、通关与失败结算**请看下面的截图部分。
 
 ## 素材说明
 
