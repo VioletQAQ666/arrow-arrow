@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 临时补丁
+_patch.py
+_check.py
+_dbg*.py
+
+# 本地游戏进度（每次运行自动生成，不需要上传）
+savegame.json
