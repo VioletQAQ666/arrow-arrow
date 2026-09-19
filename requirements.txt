@@ -1,1 +1,9 @@
+# 运行游戏所必需的依赖：装好这一个就能玩
+#     pip install -r requirements.txt
+#     python main.py
 pygame>=2.1.0
+
+# 说明：仓库里另外提供了 requirements-tools.txt，
+# 里面是"重新生成演示 GIF / 重新导出截图"这类开发工具的可选依赖
+# （Pillow、imageio-ffmpeg，其中 imageio-ffmpeg 自带上百 MB 的 ffmpeg 二进制）。
+# 玩游戏不需要它们，所以没有放在这个文件里。

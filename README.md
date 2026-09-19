@@ -27,6 +27,9 @@ pip install -r requirements.txt
 python main.py
 ```
 
+> 游戏只依赖 **pygame** 一个第三方库，`requirements.txt` 里只有它，
+> 不联网、不读任何外部图片或音频文件，装完即可运行。
+
 ### 运行测试
 
 ```bash
@@ -37,10 +40,14 @@ python -m unittest test_logic.py test_gameplay.py -v
 python self_test.py
 ```
 
-### 重新生成截图
+### 重新生成截图 / 演示 GIF（可选）
+
+这一步不是运行游戏所必需的，只有想自己重新导出素材时才需要：
 
 ```bash
-python make_screenshots.py
+pip install -r requirements-tools.txt   # 可选依赖：Pillow、imageio-ffmpeg
+python make_screenshots.py              # 重新导出 screenshots/ 里的界面截图
+python make_demo_gif.py                 # 把 demo/demo.mp4 转成 GIF
 ```
 
 ## 游戏操作说明
@@ -80,20 +87,23 @@ python make_screenshots.py
 ## 项目结构
 
 ```
-main.py             程序入口
-game.py             界面层：状态机、交互、渲染、动画
-logic.py            核心逻辑：路径检测、求解器、GameState 状态机、随机关卡生成
-levels.py           关卡数据（4 个手工设计关卡）
-theme.py            颜色 / 尺寸 / 手感参数
-graphics.py         渐变、箭头、心形、星形、按钮等绘制工具
-effects.py          粒子与飘字
-test_logic.py       路径检测、关卡可解性、随机关卡生成、星级评价的单元测试
-test_gameplay.py    T01~T06 六个必测项的自动化测试（不需要 pygame 窗口）
-self_test.py        无头整局冒烟测试：真的把游戏跑一遍
-make_screenshots.py 无头导出界面截图到 screenshots/
-make_demo_gif.py    把演示视频转成 GIF（需要 imageio-ffmpeg）
-demo/demo.gif       约 15 秒的实机演示动图（README 里自动播放）
-demo/demo.mp4       同一段演示的原视频（清晰度更高）
+main.py                程序入口
+game.py                界面层：状态机、交互、渲染、动画
+logic.py               核心逻辑：路径检测、求解器、GameState 状态机、随机关卡生成
+levels.py              关卡数据（4 个手工设计关卡）
+theme.py               颜色 / 尺寸 / 手感参数
+graphics.py            渐变、箭头、心形、星形、按钮等绘制工具
+effects.py             粒子与飘字
+test_logic.py          路径检测、关卡可解性、随机关卡生成、星级评价的单元测试
+test_gameplay.py       T01~T06 六个必测项的自动化测试（不需要 pygame 窗口）
+self_test.py           无头整局冒烟测试：真的把游戏跑一遍
+make_screenshots.py    无头导出界面截图到 screenshots/（可选工具）
+make_demo_gif.py       把演示视频转成 GIF（可选工具）
+requirements.txt       运行游戏所需依赖（只有 pygame）
+requirements-tools.txt 上面两个可选工具的依赖
+demo/demo.gif          约 15 秒的实机演示动图（README 里自动播放）
+demo/demo.mp4          同一段演示的原视频（清晰度更高）
+screenshots/           开始/选关/游戏/碰撞/通关/失败/随机 共 7 张界面截图
 ```
 
 ### 分层说明
@@ -249,5 +259,17 @@ def is_blocked(grid, row, col, direction):
 
 ## 素材说明
 
-本项目所有图形（箭头、心形、星形、按钮、粒子、渐变背景）均由 Pygame 代码实时绘制，
-未使用任何外部图片、音效素材。
+本项目**没有使用任何外部图片、音效素材**，具体如下：
+
+| 素材 | 来源 |
+|---|---|
+| 箭头、心形、星形、按钮、粒子、渐变背景 | 全部由 `graphics.py` / `effects.py` 用 `pygame.draw` 实时绘制，代码原创 |
+| 界面字体 | 用 `pygame.font.match_font()` 匹配运行环境里**已安装**的系统字体（微软雅黑 / 黑体等），仓库不附带任何字体文件 |
+| 音效 | 项目不含任何音效，代码中未使用 `pygame.mixer` |
+| 关卡数据 | `levels.py` 中 4 个关卡均为手工设计，并用 `solve_level()` 验证可解 |
+| `screenshots/` 截图 | 由 `make_screenshots.py` 在本项目界面基础上无头渲染导出 |
+| `demo/demo.mp4`、`demo/demo.gif` | 作者本人录制本项目实际运行画面；GIF 由 `make_demo_gif.py` 从 mp4 转换生成 |
+
+因此不涉及第三方素材的授权与署名问题，也未使用原商业游戏的代码、美术素材、音效或关卡。
+仓库中不含密码、Cookie、API Key、Token 等敏感信息。
+

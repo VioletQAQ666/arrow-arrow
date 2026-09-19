@@ -1,0 +1,11 @@
+# 可选工具的依赖 —— 玩游戏不需要，只有想重新生成演示素材时才装：
+#     pip install -r requirements-tools.txt
+#
+#   python make_demo_gif.py      把 demo/demo.mp4 转成 GIF
+#   python make_screenshots.py   无头导出界面截图（只需要 pygame）
+#
+# 游戏本身只依赖 pygame（见 requirements.txt）。
+
+Pillow>=9.0.0            # make_demo_gif.py 读回 GIF 尺寸做自检
+imageio-ffmpeg>=0.4.0    # 自带 ffmpeg 二进制，用它做抽帧与调色板转换
+pygame>=2.1.0            # make_screenshots.py 离屏渲染界面
